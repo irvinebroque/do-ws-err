@@ -64,6 +64,7 @@ export class WebSocketServer extends DurableObject {
     // If the client closes the connection, the runtime will close the connection too.
     server.addEventListener('close', (cls) => {
       this.currentlyConnectedWebSockets -= 1;
+	  console.log(`Close event: ${cls}`)
       server.close(cls.code, "Durable Object is closing WebSocket");
     });
 
