@@ -1,0 +1,11 @@
+name = "do-ws-err"
+main = "./src/index.js"
+compatibility_date = "2024-05-10"
+
+[[durable_objects.bindings]]
+name = "WEBSOCKET_SERVER"
+class_name = "WebSocketServer"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["WebSocketServer"]
